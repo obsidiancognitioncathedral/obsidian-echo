@@ -37,12 +37,17 @@
     </section>
   </div>
 
-  <script>
-    function checkPasscode() {
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.checkPasscode = function () {
       const input = document.getElementById("passcode").value;
       if (input.toLowerCase() === "maze") {
         document.getElementById("welcome-screen").style.display = "none";
         document.getElementById("main-content").style.display = "block";
       } else {
-        document.getElementById("error-msg").textContent = "Access
- <!-- Your complete site HTML content will go here -->
+        document.getElementById("error-msg").textContent = "Access Denied. Try again.";
+      }
+    };
+  });
+</script>
+
